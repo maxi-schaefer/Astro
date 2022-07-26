@@ -1,0 +1,184 @@
+/* =============================== Font Import =============================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/* =============================== Colors =============================== */
+:root {
+    /* Main */
+  --primary: #4db8ff;
+  --background: #161616;
+  --font: #fff;
+
+    /* Buttons */
+  --buttons-background: #2c2c2c;
+  --close-button: #d34545;
+  --maximize-button: #45d364;
+  --minimize-button: #d3c545;
+
+    /* Titlebar */
+  --titlebar-height: 30px;
+}
+
+/* =============================== Header =============================== */
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+/* =============================== Defaults =============================== */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--font);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 4px;
+}
+
+/* =============================== Application =============================== */
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    -webkit-box-sizing: border-box;
+    padding-top: var(--titlebar-height);
+  }
+  
+  .topBar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: var(--titlebar-height);
+    background-color: var(--background);
+    -webkit-user-select: none;
+  }
+  
+  .topBar > .titleBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .topBar > .titleBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .titleBar > img {
+    margin-left: 10px;
+    height: 20px;
+  }
+  
+  .titleBar > .title {
+    width: 100%;
+    line-height: var(--titlebar-height);
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-bottom: 5px;
+    font-size: 13px;
+    -webkit-app-region: drag;
+  }
+  
+  .topBar > .titleBarBtns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: var(--titlebar-height - 5px);
+    margin-right: 5px;
+  }
+  
+  .titleBarBtns > .topBtn {
+    position: relative;
+    width: 15px;
+    top: 2px;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--buttons-background);
+    border-radius: 50%;
+    margin: 5px;
+    transition: all .2s;
+  }
+  
+.titleBarBtns > .topBtn > svg{
+    transition: all .2s;
+    border-radius: 50%;
+    padding: 1.5px;
+    opacity: 0;
+    color: rgba(0, 0, 0, 0.589)
+}
+
+.titleBarBtns > .topBtn:hover > svg{
+    opacity: 1;
+}
+
+/* Minimize */
+.minimizeBtn > svg {
+    background-color: var(--minimize-button);
+}
+.minimizeBtn:hover {
+  background-color: var(--minimize-button);
+}
+
+/* Maximize */
+.maximizeBtn > svg {
+    background-color: var(--maximize-button);
+}
+.maximizeBtn:hover {
+  background-color: var(--maximize-button);
+}
+
+/* Close */
+.closeBtn > svg {
+    background-color: var(--close-button);
+}
+.closeBtn:hover {
+  background-color: var(--close-button);
+}
+
+/* =============================== Demo =============================== */
+.mainApp {
+      /* Center */
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      width: 100%;
+      height: 100%;
+      min-height: 95vh;
+}
+
+#version {
+  color: var(--primary);
+  text-shadow: 0 0 8px var(--primary);
+}

@@ -1,0 +1,21 @@
+{
+    "primary": "#47f5c6",
+    "background": "#0a0a0a",
+    "font": "#fff",
+
+    "buttons": {
+        "background": "#2c2c2c",
+        "icons": false,
+        "closeButton": "#d34545",
+        "maximizeButton": "#45d364",
+        "minimizeButton": "#d3c545"
+    },
+
+    "titlebar": {
+        "Enable": true,
+        "EnableIcon": true,
+        "icon": "./assets/icon.ico",
+        "title": "Astro",
+        "height": 30
+    }
+}
