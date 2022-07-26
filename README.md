@@ -1,5 +1,5 @@
 # Astro
-Astro is a electronjs template with a custom made titlebar, settings and some more features coming in the future
+Astro is a minimialist electronjs template with a custom made titlebar, settings and some more features coming in the future
 
 ## Install
 Cloe the repository and install dependencies:
